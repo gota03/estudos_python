@@ -9,6 +9,10 @@ radio_var = ctk.IntVar(value=3) # setando o valor inicial
 
 def radio_event():
     print(radio_var.get()) # pegando o valor marcado
+    if radio_var.get() == 0:
+        print("Masculino")
+    else:
+        print("Feminino")
 
 
 radio_1 = ctk.CTkRadioButton(janela, text="Masculino", value=0, command=radio_event, variable=radio_var)
